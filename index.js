@@ -56,6 +56,7 @@ http.createServer(async (req, res) => {
       stdio: 'inherit',
       cwd: projectDir
     })
+    console.log('create docker image success')
 
     // // 拉取 docker 镜像
     // execSync(`docker pull yeyan1996/docker-test-image:latest`, {
