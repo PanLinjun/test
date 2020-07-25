@@ -3,7 +3,8 @@
 FROM node:lts-alpine as build-stage
 WORKDIR /app
 COPY package*.json ./
-RUN npm install --registry=https://registry.npm.taobao.org
+RUN  yarn config set registry 'https://registry.npm.taobao.org'
+RUN  yarn
 COPY . .
 RUN npm run build
 
